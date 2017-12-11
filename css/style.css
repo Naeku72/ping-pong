@@ -33,3 +33,7 @@ ol{
   border-color: #0A4EF7;
 
 }
+.bttn:hover{
+  color: white;
+  background-color: #0A4EF7;
+}
