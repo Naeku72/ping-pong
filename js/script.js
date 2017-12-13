@@ -1,7 +1,7 @@
 //business logic
 var userNumber = [];
-function pingPong (number){
-    for (var index = 1; index <= number; index+=1){
+function pingPong (inputtednumber){
+    for (var index = 1; index <= inputtednumber; index+=1){
         if(index % 15 === 0){
             userNumber.push("pingpong");
         }
@@ -20,12 +20,12 @@ function pingPong (number){
 $(document).ready(function(){
    $("form#ping-pong").submit(function(){
       event.preventDefault();
-      var number = parseInt($("input#number").val());
+      var inputtednumber = parseInt($("input#number").val());
 
-      pingPong(number);
+      pingPong(inputtednumber);
 
-      userNumber.forEach(function(number){
-         $("#output").append('<li>' + number + "</li>");
+      userNumber.forEach(function(element){
+         $("#output").append('<li>' + element + "</li>");
       });
    });
 });
