@@ -21,9 +21,7 @@ $(document).ready(function(){
    $("form#ping-pong").submit(function(){
       event.preventDefault();
       var number = parseInt($("input#number").val());
-
       pingPong(number);
-
       userNumber.forEach(function(number){
          $("#output").append('<li>' + number + "</li>");
       });
